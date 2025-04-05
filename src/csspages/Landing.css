@@ -1,14 +1,16 @@
-/* Style for the matrix rain canvas to cover the full viewport */
-/* canvas#c {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-} */
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Full-page overlay for fade-in effect */
+/* Prevent horizontal scroll at the body/container level */
+body {
+    overflow-x: hidden;
+}
+
+/* Full-page overlay, typewriter, and glitch styles remain unchanged */
 .overlay {
     position: fixed;
     top: 0;
@@ -26,74 +28,149 @@
     pointer-events: none;
 }
 
-/* Container for the two-column layout */
+/* Landing Container: Two-column layout on desktop */
 .landing-container {
     display: flex;
     min-height: 100vh;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
 }
 
-/* Left column styling: sticky sidebar with a gradient */
-.left-column {
-    position: sticky;
-    top: 0;
-    width: 250px;
-    background: linear-gradient(to bottom, #000, #e50914);
-    color: #fff;
-    padding: 20px;
-    flex-shrink: 0;
-}
-
-/* Profile picture container */
-.profile-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Rounded profile picture with a red border accent */
-.profile-pic {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #e50914;
-}
-
-/* Navigation styling */
-.navigation ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.navigation li {
-    margin: 15px 0;
-}
-
-.navigation a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-.navigation a:hover {
-    color: #e50914;
-}
-
-/* Right column styling: main content area */
+/* Right Column (Main Content) */
 .right-column {
     flex-grow: 1;
     padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Prevent horizontal overflow */
+    width: calc(100% - 250px);
+    margin-left: 250px;
 }
 
-/* Responsive adjustments */
+/* Welcome h1 typewriter + glitch effect (inside .welcome container) */
+.welcome h1 {
+    position: relative;
+    /* or your custom font */
+    transition: opacity 0.15s;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #e0ffff;
+    width: 0;
+    animation: typing 3s steps(25) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #e0ffff;
+    }
+}
+
+.welcome h1:hover {
+    opacity: 0.9;
+    text-shadow: 0px -5px #ec2225, 0px 5px #00c2cb, -5px 0px #ec2225, 5px 0px #00c2cb;
+}
+
+.welcome h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #e0ffff;
+    z-index: -1;
+}
+
+.welcome h1:hover::before {
+    animation: animate 12ms ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        top: -7px;
+        left: 0;
+        opacity: 1;
+    }
+
+    20% {
+        top: 0;
+        left: -10px;
+        opacity: 0.7;
+    }
+
+    40% {
+        top: 7px;
+        left: 0;
+        opacity: 0.2;
+    }
+
+    60% {
+        top: 0;
+        left: 10px;
+        opacity: 0.3;
+    }
+
+    80% {
+        top: 0;
+        left: 0;
+        opacity: 0.9;
+    }
+}
+
+@media (max-width: 1202px) {
+    .welcome h1 {
+        /* Smaller text for mobile */
+        animation: typing 3s steps(30, start) forwards, blink-caret 0.75s step-end infinite;
+        white-space: normal;
+        /* Allow wrapping on small screens */
+    }
+
+    .right-column {
+        flex-grow: 1;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        /* Prevent horizontal overflow */
+        width: calc(100% - 180px);
+        margin-left: 180px;
+    }
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .landing-container {
         flex-direction: column;
     }
 
-    .left-column {
+    /* Force left and right panes to span 100% width */
+    .right-column {
         width: 100%;
-        position: relative;
+        padding: 20px;
+        margin: 0;
     }
+
+    .welcome h1 {
+        /* Smaller text for mobile */
+        animation: typing 3s steps(30, start) forwards, blink-caret 0.75s step-end infinite;
+        white-space: normal;
+        /* Allow wrapping on small screens */
+    }
+
 }

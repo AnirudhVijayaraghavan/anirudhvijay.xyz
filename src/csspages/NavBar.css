@@ -1,0 +1,88 @@
+/* Left Column (Sidebar) - Desktop */
+.left-column {
+    position: fixed;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    background: linear-gradient(to bottom, #000, #e50914);
+    color: #fff;
+    padding: 20px;
+    flex-shrink: 0;
+}
+
+
+/* Profile Container */
+.profile-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #e50914;
+}
+
+/* Navigation Styling (Desktop: vertical) */
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation li {
+    margin: 15px 0;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #e50914;
+    text-shadow: 0 0 5px #e50914;
+}
+
+/* Active Link */
+.navigation li.active a {
+    text-shadow: 0 0 8px #e50914, 0 0 12px #e50914;
+    font-weight: bold;
+}
+
+@media (max-width: 1202px) {
+    .left-column {
+        width: 180px;
+        /* slightly smaller */
+    }
+}
+
+@media (max-width: 768px) {
+
+    .left-column {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow-y: visible;
+        /* Add horizontal padding to ensure content doesn't touch edges */
+        padding: 20px;
+    }
+
+    /* Navigation: Horizontal layout */
+    .navigation ul {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .navigation li {
+        margin: 0;
+    }
+}

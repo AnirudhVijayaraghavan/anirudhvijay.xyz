@@ -3,7 +3,8 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import App from './App';
-import Landing from './pages/Landing';
+import About from './pages/About';
+
 
 function AppRoutes() {
   return (
@@ -11,7 +12,9 @@ function AppRoutes() {
       {/* The Layout wraps all routes so the canvas stays persistent */}
       <Route path="/" element={<Layout />}>
         <Route index element={<App />} />
-        <Route path="landing" element={<Landing />} />
+        <Route path="about" element={<About />} />
+        <Route path="projects" element={<About />} />
+        <Route path="contact" element={<About />} />
         {/* Additional routes go here */}
       </Route>
     </Routes>

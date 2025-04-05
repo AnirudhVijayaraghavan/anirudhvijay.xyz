@@ -1,0 +1,110 @@
+/* Container for the cards */
+.landing-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    /* Define grid areas for a custom layout on desktop:
+       - First row: Card1 spans 2 columns, Card2 spans 1 column.
+       - Second row: Three cards side by side.
+    */
+    grid-template-areas:
+        "card1 card1 card2 card2"
+        "card3 card4 card4 card5";
+    gap: 20px;
+    padding: 0px;
+}
+
+/* Common card styles with a matrix vibe */
+.card {
+    background: linear-gradient(145deg, #0d0d0d, hwb(235 15% 31%));
+    color: #fff;
+    padding: 30px;
+    /* Increased padding for a larger feel */
+    min-height: 220px;
+    /* Sets a minimum height for more presence */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* Assign grid areas to each card */
+.landing-cards .card:nth-child(1) {
+    grid-area: card1;
+}
+
+.landing-cards .card:nth-child(2) {
+    grid-area: card2;
+}
+
+.landing-cards .card:nth-child(3) {
+    grid-area: card3;
+}
+
+.landing-cards .card:nth-child(4) {
+    grid-area: card4;
+}
+
+.landing-cards .card:nth-child(5) {
+    grid-area: card5;
+}
+
+/* Responsive adjustments for screens 768px and below */
+@media (max-width: 1202px) {
+    .card {
+        background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+        color: #fff;
+        padding: 15px;
+        /* Increased padding for a larger feel */
+        min-height: 170px;
+        /* Sets a minimum height for more presence */
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+        border: 1px solid rgba(255, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+    }
+}
+
+/* Responsive adjustments for screens 768px and below */
+@media (max-width: 768px) {
+    .landing-cards {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5";
+    }
+}
+
+.tech-category {
+    margin-bottom: 20px;
+    /* Space between categories */
+}
+
+.tech-category strong {
+    display: block;
+    /* Or inline if you prefer them on the same line */
+    margin-bottom: 5px;
+}
+
+.tech-icon-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-icon {
+    font-size: 24px;
+    /* Adjust icon size */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /* So it feels clickable/hoverable */
+}

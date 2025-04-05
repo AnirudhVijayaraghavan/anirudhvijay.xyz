@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+.glitch-clock-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Scope everything under .glitch-clock-container */
+.glitch-clock-container *,
+.glitch-clock-container *:before,
+.glitch-clock-container *:after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.glitch-clock-container .screen {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.glitch-clock-container a.switcher {
+    display: block;
+    position: fixed;
+    text-decoration: none;
+    z-index: 999999999999;
+    right: 20px;
+    bottom: 20px;
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    opacity: 0.15;
+    transition: opacity 0.15s;
+}
+
+.glitch-clock-container a.switcher:hover {
+    opacity: 1;
+}
+
+.glitch-clock-container a.switcher:before {
+    display: block;
+    content: '';
+    position: absolute;
+    border-radius: 4px;
+    width: 2px;
+    height: 5px;
+    background: #fff;
+    top: 0;
+    left: 5px;
+}
+
+/* Glitch clock specific styles */
+.glitch-clock-container .figure {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-top: 200px solid #fff;
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    border-bottom: 0 solid transparent;
+}
+
+.glitch-clock-container .figure:before {
+    display: block;
+    content: '';
+    position: absolute;
+    z-index: 99;
+    width: 0;
+    height: 0;
+    top: -194px;
+    left: -90px;
+    margin: auto;
+    border-top: 180px solid #111;
+    border-right: 90px solid transparent;
+    border-left: 90px solid transparent;
+    border-bottom: 0 solid transparent;
+}
+
+.glitch-clock-container .figure-mask {
+    display: block;
+    position: absolute;
+    z-index: 99;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-top: 200px solid transparent;
+    border-right: 100px solid #111;
+    border-left: 100px solid #111;
+    border-bottom: 0 solid transparent;
+}
+
+.glitch-clock-container .clock {
+    display: block;
+    position: absolute;
+    z-index: 9;
+    width: 720px;
+    height: 128px;
+    text-align: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    cursor: default;
+}
+
+.glitch-clock-container .clock span {
+    display: block;
+    position: relative;
+    font-size: 128px;
+    line-height: 1;
+}
+
+.glitch-clock-container .clock.is-off {
+    animation: is-off 2s linear infinite !important;
+}
+
+.glitch-clock-container .glitch:before {
+    position: absolute;
+    z-index: 999999;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: bg-move 2s linear infinite;
+    background-size: 100% 8px;
+    background-image: linear-gradient(0, rgba(255, 255, 255, 0.05) 10%, transparent 10%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 60%, transparent 60%, transparent);
+}
+
+.glitch-clock-container .glitch .figure,
+.glitch-clock-container .glitch .figure-mask {
+    transform: skewX(0deg) scaleY(1);
+    animation: tr-bag 4s linear infinite;
+}
+
+.glitch-clock-container .glitch .clock {
+    transform: skewX(0deg) scaleY(1);
+    animation: clock-bag 4s linear infinite;
+}
+
+.glitch-clock-container .glitch .clock span:before,
+.glitch-clock-container .glitch .clock span:after {
+    display: block;
+    content: attr(data-time);
+    position: absolute;
+    top: 0;
+    color: #fff;
+    background: #111;
+    overflow: hidden;
+    width: 720px;
+    height: 128px;
+    clip: rect(0, 900px, 0, 0);
+}
+
+.glitch-clock-container .glitch .clock span:before {
+    left: -2px;
+    text-shadow: 2px 0 blue;
+    animation: c2 1s infinite linear alternate-reverse;
+}
+
+.glitch-clock-container .glitch .clock span:after {
+    left: 3px;
+    text-shadow: -2px 0 red;
+    animation: c1 2s infinite linear alternate-reverse;
+}
+
+
+/* Keyframes remain the same */
+@keyframes is-off {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    56% {
+        opacity: 0;
+    }
+
+    57% {
+        opacity: 0;
+    }
+
+    58% {
+        opacity: 1;
+    }
+
+    71% {
+        transform: scaleY(1) skewX(0deg);
+    }
+
+    72% {
+        transform: scaleY(3) skewX(-60deg);
+    }
+
+    73% {
+        transform: scaleY(1) skewX(0deg);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    81% {
+        opacity: 0;
+    }
+
+    84% {
+        opacity: 0;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    91% {
+        transform: scaleX(1) scaleY(1) skewX(0deg);
+        color: #fff;
+    }
+
+    92% {
+        transform: scaleX(1.5) scaleY(0.2) skewX(80deg);
+        color: green;
+    }
+
+    93% {
+        transform: scaleX(1) scaleY(1) skewX(0deg);
+        color: #fff;
+    }
+}
+
+@keyframes c1 {
+    0% {
+        clip: rect(10px, 9999px, 20px, 0);
+    }
+
+    25% {
+        clip: rect(15px, 9999px, 25px, 0);
+    }
+
+    50% {
+        clip: rect(5px, 9999px, 15px, 0);
+    }
+
+    75% {
+        clip: rect(12px, 9999px, 22px, 0);
+    }
+
+    100% {
+        clip: rect(8px, 9999px, 18px, 0);
+    }
+}
+
+@keyframes c2 {
+    0% {
+        clip: rect(20px, 9999px, 30px, 0);
+    }
+
+    25% {
+        clip: rect(18px, 9999px, 28px, 0);
+    }
+
+    50% {
+        clip: rect(22px, 9999px, 32px, 0);
+    }
+
+    75% {
+        clip: rect(16px, 9999px, 26px, 0);
+    }
+
+    100% {
+        clip: rect(20px, 9999px, 30px, 0);
+    }
+}
+
+@keyframes clock-bag {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    1% {
+        transform: scaleY(1) skewX(0deg);
+    }
+
+    1.5% {
+        transform: scaleY(3) skewX(-60deg);
+    }
+
+    2% {
+        transform: scaleY(1) skewX(0deg);
+    }
+
+    25% {
+        transform: translate(2px, -2px);
+    }
+
+    50% {
+        transform: translate(-2px, 2px);
+    }
+
+    51% {
+        transform: scaleX(1) scaleY(1) skewX(0deg);
+    }
+
+    52% {
+        transform: scaleX(1.5) scaleY(0.2) skewX(80deg);
+    }
+
+    53% {
+        transform: scaleX(1) scaleY(1) skewX(0deg);
+    }
+
+    75% {
+        transform: translate(2px, 2px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes tr-bag {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    1% {
+        transform: scaleY(1) skewX(0deg);
+    }
+
+    1.5% {
+        transform: scaleY(3) skewX(-60deg);
+    }
+
+    2% {
+        transform: scaleY(1) skewX(0deg);
+    }
+
+    25% {
+        transform: translate(-2px, 2px);
+    }
+
+    50% {
+        transform: translate(2px, -2px);
+    }
+
+    51% {
+        transform: scaleX(1) scaleY(1) skewX(0deg);
+    }
+
+    52% {
+        transform: scaleX(1.5) scaleY(0.2) skewX(80deg);
+    }
+
+    53% {
+        transform: scaleX(1) scaleY(1) skewX(0deg);
+    }
+
+    75% {
+        transform: translate(-2px, -2px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes bg-move {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 -32px;
+    }
+}

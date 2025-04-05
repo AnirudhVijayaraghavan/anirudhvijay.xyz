@@ -1,0 +1,61 @@
+{
+    "about": [
+        "about.",
+        "I thrive on unraveling complex problems and transforming them into streamlined, elegant solutions."
+    ],
+    "techstack": {
+        "title": "tech stack.",
+        "sections": [
+            {
+                "label": "Languages & Databases",
+                "techs": [
+                    "Javascript",
+                    "PHP",
+                    "Python",
+                    "PostgreSQL",
+                    "MySQL",
+                    "Redis"
+                ]
+            },
+            {
+                "label": "Web",
+                "techs": [
+                    "Laravel",
+                    "Node.js",
+                    "jQuery",
+                    "React Vite",
+                    "Tailwind CSS",
+                    "Postman",
+                    "Figma"
+                ]
+            },
+            {
+                "label": "DevOps/CICD/Cloud",
+                "techs": [
+                    "AWS",
+                    "DigitalOcean",
+                    "GCP",
+                    "Pulumi",
+                    "Packer",
+                    "Linux",
+                    "Github",
+                    "Bash",
+                    "Terraform",
+                    "Docker"
+                ]
+            }
+        ]
+    },
+    "history": [
+        "history.",
+        "I thrive on unraveling complex problems and transforming them into streamlined, elegant solutions."
+    ],
+    "funstuff": [
+        "fun stuff.",
+        "I thrive on unraveling complex problems and transforming them into streamlined, elegant solutions."
+    ],
+    "misc": [
+        "misc.",
+        "I thrive on unraveling complex problems and transforming them into streamlined, elegant solutions."
+    ]
+}

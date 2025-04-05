@@ -1,22 +1,7 @@
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
 /* App.css or global.css */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 3.2em;
+  font-size: 2.6em;
   line-height: 1.1;
 }
 
@@ -78,27 +63,6 @@ body {
 
 .logo:hover {
   filter: drop-shadow(0 0 2em red);
-  transform: scale(1.1);
-  opacity: 100%;
-}
-
-/* Social icons container */
-.social-icons {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-/* Social icons images */
-.social-icons img {
-  height: 2.5em;
-  /* Optionally add transition effects */
-  transition: transform 200ms;
-  opacity: 70%;
-}
-
-.social-icons img:hover {
-  transform: scale(1.1);
+  transform: scale(1.5);
   opacity: 100%;
 }
