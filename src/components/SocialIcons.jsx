@@ -1,24 +1,33 @@
+import React, { useEffect } from 'react';
+import { gsap } from "gsap";
+import '../csspages/SocialIcons.css';
 import githublogo from '/iconmonstr-github-5-240-dark.png';
 import linkedinlogo from '/iconmonstr-linkedin-5-240-dark.png';
 import instagramlogo from '/iconmonstr-instagram-15-240-dark.png';
-import React, { useEffect } from 'react';
-import '../csspages/SocialIcons.css';
-import { gsap } from "gsap";
+
+// Global counter variable (persists for the life of the SPA)
+let socialIconsAnimationCount = 1;
 
 function SocialIcons() {
     useEffect(() => {
-        gsap.fromTo(
-            '.social-icons',
-            { x: '-100%', opacity: 0 },
-            {
-                x: '0%',
-                opacity: 1,
-                duration: 2,
-                stagger: 0.5,
-                ease: 'bounce.out'
-            }
-        );
+        if (socialIconsAnimationCount <= 2) {
+            gsap.fromTo(
+                '.social-icons',
+                { x: '-100%', opacity: 0 },
+                {
+                    x: '0%',
+                    opacity: 1,
+                    duration: 2,
+                    stagger: 0.5,
+                    ease: 'bounce.out',
+                    onComplete: () => {
+                        socialIconsAnimationCount++;
+                    }
+                }
+            );
+        }
     }, []);
+
     return (
         <div className="social-icons">
             <a href="https://www.instagram.com/anirudh.vijayaraghavan/" target="_blank" rel="noopener noreferrer">

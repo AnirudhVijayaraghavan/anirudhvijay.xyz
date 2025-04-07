@@ -52,10 +52,10 @@
 }
 
 /* Active Link */
-.navigation li.active a {
+.navigation .active {
     text-shadow: 0 0 8px #e50914, 0 0 12px #e50914;
     font-weight: bold;
-}
+  }
 
 @media (max-width: 1202px) {
     .left-column {
@@ -68,7 +68,7 @@
 
     .left-column {
         position: relative;
-        width: 100%;
+        width: auto;
         height: auto;
         overflow-y: visible;
         /* Add horizontal padding to ensure content doesn't touch edges */

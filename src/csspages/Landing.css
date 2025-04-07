@@ -45,6 +45,7 @@ body {
     /* Prevent horizontal overflow */
     width: calc(100% - 250px);
     margin-left: 250px;
+    box-sizing: border-box;
 }
 
 /* Welcome h1 typewriter + glitch effect (inside .welcome container) */
@@ -52,11 +53,12 @@ body {
     position: relative;
     /* or your custom font */
     transition: opacity 0.15s;
-    white-space: nowrap;
+    white-space: normal;
     overflow: hidden;
     border-right: 2px solid #e0ffff;
     width: 0;
     animation: typing 3s steps(25) forwards, blink-caret 0.75s step-end infinite;
+    font-size: 40px;
 }
 
 @keyframes typing {
@@ -65,7 +67,7 @@ body {
     }
 
     to {
-        width: 90%;
+        width: 93%;
     }
 }
 

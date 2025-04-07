@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { runMatrix } from '../matrix/matrix';
-import '../csspages/Layout.css';;
+import '../csspages/Layout.css';
 
 function Layout() {
   useEffect(() => {

@@ -1,6 +1,7 @@
 // techIcons.js
 import { DiLinux, DiJavascript1, DiPhp, DiPython, DiPostgresql, DiMysql, DiDocker, DiRedis } from 'react-icons/di';
 import { SiAmazonwebservices, SiPacker, SiGnubash, SiGithub, SiLaravel, SiPulumi, SiNodedotjs, SiJquery, SiReact, SiTailwindcss, SiPostman, SiFigma, SiDigitalocean, SiGooglecloud, SiTerraform } from 'react-icons/si';
+import { PiPianoKeys } from "react-icons/pi";
 
 const techIconMap = {
     "Javascript": <DiJavascript1 />,

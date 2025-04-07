@@ -8,6 +8,8 @@ import SocialIcons from './components/SocialIcons';
 function App() {
   const [animateOut, setAnimateOut] = useState(false);
   const navigate = useNavigate();
+  const [quote, setQuote] = useState("");
+  const [author, setAuthor] = useState("");
 
   const handleBullClick = (e) => {
     e.preventDefault(); // Prevent default anchor behavior
@@ -17,6 +19,28 @@ function App() {
       navigate('/about');
     }, 500); // Adjust this delay to match your CSS animation duration
   };
+
+  const api_url = "https://zenquotes.io/api/quotes/";
+
+  useEffect(() => {
+    async function getapi(url) {
+      try {
+        // Use an alternative proxy if needed
+        const proxyUrl = "https://thingproxy.freeboard.io/fetch/";
+        const response = await fetch(proxyUrl + url);
+        const data = await response.json();
+        if (data && data.length > 0) {
+          const randomIndex = Math.floor(Math.random() * data.length);
+          const randomQuote = data[randomIndex];
+          setQuote(randomQuote.q);
+          setAuthor(randomQuote.a);
+        }
+      } catch (error) {
+        console.error("Error fetching quote:", error);
+      }
+    }
+    getapi(api_url);
+  }, [api_url]);
 
   return (
     <>
@@ -29,7 +53,20 @@ function App() {
           <img src={bull} className="logo" alt="Bull logo" />
         </a>
         {/* Social icons container */}
-        <SocialIcons/>
+        <SocialIcons />
+        {/* Random Inspirational Quote */}
+        <br /><br />
+        <div className="quote-container">
+          <br />
+          {quote ? (
+            <blockquote>
+              <p>"{quote}"</p>
+              <footer>- {author}</footer>
+            </blockquote>
+          ) : (
+            <p>Loading quote...</p>
+          )}
+        </div>
       </div>
     </>
   );

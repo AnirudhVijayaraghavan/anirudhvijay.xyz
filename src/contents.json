@@ -1,7 +1,7 @@
 {
     "about": [
         "about.",
-        "I thrive on unraveling complex problems and transforming them into streamlined, elegant solutions."
+        "</br> I thrive on unraveling complex problems and transforming them into streamlined, elegant solutions. I graduated from Northeastern University, with a Master of Science in Software Engineering, in 2025. </br></br> <hr style='border: none; border-top: 3px dotted red;'> </br> <p>Currently mastering> <strong>Laravel</strong></p>"
     ],
     "techstack": {
         "title": "tech stack.",
@@ -11,7 +11,6 @@
                 "techs": [
                     "Javascript",
                     "PHP",
-                    "Python",
                     "PostgreSQL",
                     "MySQL",
                     "Redis"
@@ -48,14 +47,43 @@
     },
     "history": [
         "history.",
-        "I thrive on unraveling complex problems and transforming them into streamlined, elegant solutions."
+        "Click to view my timeline."
     ],
-    "funstuff": [
-        "fun stuff.",
-        "I thrive on unraveling complex problems and transforming them into streamlined, elegant solutions."
+    "timeline": [
+        {
+            "date": "Jan 2024 - Jun 2024",
+            "title": "Full Stack Web Developer Co-op, Neva Group Inc.",
+            "description": "Worked on truulee.com (Currently in pre-launch), with Laravel."
+        },
+        {
+            "date": "Sep 2022 - Dec 2024",
+            "title": "Master's in Software Engineering",
+            "description": "Studied at Northeastern University, Boston. Specialized in DSA/OOPs, Web Development, Cloud Computing, and Game dev."
+        },
+        {
+            "date": "Aug 2018 - May 2022",
+            "title": "Senior Software Engineer, Metlife Inc. (Infosys Ltd.)",
+            "description": "Developed, tested, and supported over 60 Mainframe and Java Core systems/applications."
+        },
+        {
+            "date": "Aug 2014 - May 2018",
+            "title": "Bachelor's in Electrical and Electronics Engineering",
+            "description": "Studied at SRM University and learned the fundamentals of programming and system design."
+        }
+        
     ],
+    "funstuff": {
+        "title": "fun facts.",
+        "items": [
+            "I play the piano.",
+            "I love powerlifting, bodybuilding, and Muay Thai.",
+            "I'm from India, and I grew up in Singapore.",
+            "PHP > everything else.",
+            "Jobs are temporary, Wu-Tang is forever, Doom is ETERNAL."
+        ]
+    },
     "misc": [
         "misc.",
-        "I thrive on unraveling complex problems and transforming them into streamlined, elegant solutions."
+        "<br/> Coming soon."
     ]
 }

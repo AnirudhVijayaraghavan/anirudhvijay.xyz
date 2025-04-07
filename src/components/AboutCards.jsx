@@ -4,6 +4,8 @@ import { gsap } from "gsap";
 import Card from './Card';
 import AboutContents from '../contents.json';
 import techIconMap from '../matrix/techicons';
+import HistoryCard from './HistoryCard';
+import { SiZcool } from "react-icons/si";
 
 function AboutCards() {
 
@@ -31,9 +33,11 @@ function AboutCards() {
             {/* <Card data={AboutContents.techstack} techs={techs} /> */}
             <div className="card">
                 <h3>{AboutContents.techstack.title}</h3>
+                <br/>
                 {AboutContents.techstack.sections.map((section, i) => (
                     <div key={i} className="tech-category">
                         <strong>{section.label}:</strong>
+                        
                         <div className="tech-icon-row">
                             {section.techs.map((tech, j) => (
                                 // "title" attribute provides a native tooltip on hover
@@ -45,8 +49,20 @@ function AboutCards() {
                     </div>
                 ))}
             </div>
-            <Card data={AboutContents.history} />
-            <Card data={AboutContents.funstuff} />
+            <HistoryCard data={AboutContents.history} timelineData={AboutContents.timeline} />
+            {/* <Card data={AboutContents.funstuff} /> */}
+            <div className="card">
+                <h3>{AboutContents.funstuff.title}</h3>
+                <br/>
+                <ul className="funstuff-list">
+                    {AboutContents.funstuff.items.map((item, index) => (
+                        <li key={index}>
+                            <SiZcool className="fun-bullet" />
+                            <span>{item}</span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
             <Card data={AboutContents.misc} />
         </div>
     );
