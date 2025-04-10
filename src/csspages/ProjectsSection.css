@@ -1,0 +1,105 @@
+/* Carousel outer container */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    margin-top: 20px;
+}
+
+/* Demo Link styling */
+.demo-link {
+    color: #e50914;
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-left: 5px;
+    transition: color 0.3s ease;
+}
+
+.demo-link:hover {
+    color: #fff;
+}
+
+/* Carousel content container */
+.carousel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    /* Center it in its container */
+}
+
+/* Project image styling */
+.carousel-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: fill;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #e50914;
+}
+
+.carousel-text h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    white-space: normal;
+    /* Allow wrapping */
+    overflow-wrap: break-word;
+    /* Break words if necessary */
+    word-break: break-all;
+    /* Force break in long, unbreakable strings */
+    max-width: 100%;
+}
+
+
+.carousel-text p {
+    color: #f6d8d5;
+    font-size: 1.1rem;
+    white-space: normal;
+    /* Allow wrapping if needed */
+    overflow-wrap: break-word;
+}
+
+/* Carousel navigation buttons */
+.carousel-btn {
+    background: transparent;
+    border: 2px solid #e50914;
+    color: #e50914;
+    font-size: 2.5rem;
+    padding: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    transform: scale(1.04);
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .carousel-btn {
+        margin: 10px;
+    }
+
+    .carousel-content {
+        margin: 10px 0;
+        /* Optionally, reduce max-width on very small screens */
+        max-width: 90%;
+    }
+}

@@ -1,7 +1,7 @@
 {
     "about": [
         "about.",
-        "</br> I thrive on unraveling complex problems and transforming them into streamlined, elegant solutions. I graduated from Northeastern University, with a Master of Science in Software Engineering, in 2025. </br></br> <hr style='border: none; border-top: 3px dotted red;'> </br> <p>Currently mastering> <strong>Laravel</strong></p>"
+        "</br> I'm a full stack web developer based in Boston. I thrive on unraveling complex problems and transforming them into streamlined, elegant solutions. I graduated from Northeastern University, with a Master of Science in Software Engineering, in 2024. </br></br> <hr style='border: none; border-top: 3px dotted red;'> </br> <p>Currently mastering> <strong>Laravel</strong></p>"
     ],
     "techstack": {
         "title": "tech stack.",
@@ -84,6 +84,6 @@
     },
     "misc": [
         "misc.",
-        "<br/> Coming soon."
+        "<br/> Old website: <a href='https://www.anirudhvijayaraghavan.me' style='text-decoration:none;'>anirudhvijayaraghavan.me</a> <br/><br/> More content coming <strong>soon.</strong>"
     ]
 }

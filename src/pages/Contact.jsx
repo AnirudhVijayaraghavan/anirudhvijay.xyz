@@ -19,7 +19,7 @@ function Contact() {
                 <main className="right-column">
                     <br />
                     <div className="welcome">
-                        <h1 data-text="Shoot me an email....Let's collaborate.">
+                        <h1 data-text="Let's collaborate.... Shoot me an email.">
                             Let's collaborate.... Shoot me an email.
                         </h1>
                     </div>

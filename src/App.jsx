@@ -20,14 +20,12 @@ function App() {
     }, 500); // Adjust this delay to match your CSS animation duration
   };
 
-  const api_url = "https://zenquotes.io/api/quotes/";
+  const api_url = "/api/quotes/";
 
   useEffect(() => {
     async function getapi(url) {
       try {
-        // Use an alternative proxy if needed
-        const proxyUrl = "https://thingproxy.freeboard.io/fetch/";
-        const response = await fetch(proxyUrl + url);
+        const response = await fetch(url);
         const data = await response.json();
         if (data && data.length > 0) {
           const randomIndex = Math.floor(Math.random() * data.length);
@@ -41,6 +39,7 @@ function App() {
     }
     getapi(api_url);
   }, [api_url]);
+
 
   return (
     <>

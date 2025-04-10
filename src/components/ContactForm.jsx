@@ -72,7 +72,10 @@ function ContactForm() {
                     required
                 ></textarea>
             </div>
-            <button type="submit">Send Message</button>
+            {/* <button type="submit">Send Message</button> */}
+            <button class='glowing-btn' type="submit"><span class='glowing-txt'>
+                S<span class='faulty-letter'>U</span>BM<span class='faulty-letter'>I</span>T</span>
+            </button>
         </form>
     );
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../csspages/Landing.css'; // Reuse the same CSS or create Projects.css if needed
 import NavBar from '../components/NavBar';
 import AboutCards from '../components/AboutCards';
+import ProjectsSection from '../components/ProjectsSection';
 
 function Projects() {
     return (
@@ -20,9 +21,9 @@ function Projects() {
                         </h1>
                     </div>
                     <br />
-                    <br />
                     {/* Additional main content */}
-                    <AboutCards />
+                    {/* <AboutCards /> */}
+                    <ProjectsSection />
                 </main>
             </div>
         </>
