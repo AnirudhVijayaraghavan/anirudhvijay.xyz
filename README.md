@@ -1,5 +1,8 @@
 # Personal Portfolio
 
+Check it out here: [anirudhvijay.xyz](https://anirudhvijay.xyz)
+![Project Screenshot](./public/portmain.png)
+![Project Screenshot](./public/port1.png)
 ---
 
 ## About
