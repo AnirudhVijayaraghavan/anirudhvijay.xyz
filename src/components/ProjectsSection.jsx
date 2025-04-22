@@ -8,12 +8,12 @@ const projectsData = [
     {
         title: 'cloudpractitionerhelp.anirudhvijay.xyz',
         description: 'Actively developing an AI assisted test simulator, for the AWS Certified Cloud Practitioner exam.',
-        image: '/images/project-gamma.jpg',
-        demo: 'https://shorty.anirudhvijay.xyz'
+        image: '/cphmain.png',
+        demo: 'https://github.com/AnirudhVijayaraghavan/cloudpractitionerhelp'
     },
     {
         title: 'shorty.anirudhvijay.xyz',
-        description: 'A production ready url shortener, built with Laravel, Livewire, deployed to a Linux server, with NGINX config. Utlized Gates, Policies, Laravel Scout with Typesense search features, Redis, Middlewares, Authentication, MySQL, asynchronous processing for e-mail thorugh job dispatch, and CRONs.',
+        description: 'A production ready url shortener, built with Laravel, Livewire, deployed to a Linux server, with NGINX config. Utlized Gates, Policies, Laravel Scout with Typesense search features, Redis, Middlewares, Authentication, MySQL, asynchronous processing for e-mail through job dispatch, and CRONs.',
         image: '/shortymain.png',
         demo: 'https://shorty.anirudhvijay.xyz'
     },
