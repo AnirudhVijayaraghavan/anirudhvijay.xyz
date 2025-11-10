@@ -6,10 +6,16 @@ import '../csspages/ProjectsSection.css';
 // Sample project data—replace with your own or import from JSON.
 const projectsData = [
     {
-        title: 'cloudpractitionerhelp.anirudhvijay.xyz',
-        description: 'Actively developing an AI assisted test simulator, for the AWS Certified Cloud Practitioner exam.',
+        title: 'lms.anirudhvijay.xyz',
+        description: 'A demo app of a Library Management System, built with Laravel, VueJS, and Inertia.',
+        image: '/lmsmain.png',
+        demo: 'https://www.lms.anirudhvijay.xyz'
+    },
+    {
+        title: 'cloudpractitionerhelp.com',
+        description: 'Actively developing an AI assisted test simulator, to help students clear AWS Certified Cloud Practitioner exam, and more.',
         image: '/cphmain.png',
-        demo: 'https://github.com/AnirudhVijayaraghavan/cloudpractitionerhelp'
+        demo: 'https://www.cloudpractitionerhelp.com'
     },
     {
         title: 'shorty.anirudhvijay.xyz',

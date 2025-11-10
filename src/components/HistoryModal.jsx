@@ -9,7 +9,7 @@ function HistoryModal({ onClose, timelineData }) {
         // Create a temporary <a> element
         const link = document.createElement('a');
         // Set the href to the location of your resume file; ensure the file is in your public folder
-        link.href = '/resume.pdf'; // Adjust this path as needed
+        link.href = '/Anirudh_Vijayaraghavan_Resume-3.pdf'; // Adjust this path as needed
         // Set the download attribute to specify the filename for the downloaded file
         link.download = 'Anirudh_Vijayaraghavan_Resume.pdf';
         // Append to the body (required for Firefox)
